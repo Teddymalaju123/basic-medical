@@ -76,8 +76,8 @@
         <!-- Popup หากเลือก หอบมาก -->
         <div v-if="hardAsthmaPopupVisible" class="popup">
           <div class="header-pop">
-          <h2>หอบมาก</h2>
-          <p>คำอธิบายเกี่ยวกับอาการเบื้องต้นของหอบ</p>
+            <h2>หอบมาก</h2>
+            <p>คำอธิบายเกี่ยวกับอาการเบื้องต้นของหอบ</p>
           </div>
 
           <div class="body-popup">
@@ -99,9 +99,15 @@
         <div v-if="medicationPopupVisible" class="popup">
           <h2>วิธีพ่นยา</h2>
           <p>ข้อมูลเกี่ยวกับการพ่นยาสำหรับการรักษาอาการหอบ</p>
-          <img src="@/assets/asthema.png" alt="รูปภาพ" width="500" height="auto" />
+          <img
+            src="@/assets/asthema.png"
+            alt="รูปภาพ"
+            style="width: 10px; height: auto"
+          />
           <div>
-            <button @click="closePopup" class="btn btn-secondary mt-2">ปิด</button>
+            <button @click="closePopup" class="btn btn-secondary mt-2">
+              ปิด
+            </button>
           </div>
         </div>
       </div>
@@ -218,7 +224,7 @@ export default {
   padding-top: 5px;
 }
 
-.img{
+.img {
   size: 50%;
 }
 </style>
