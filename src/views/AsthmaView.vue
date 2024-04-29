@@ -102,7 +102,7 @@
           <img
             src="@/assets/asthema.png"
             alt="รูปภาพ"
-            style="width: 100vw; height: 100vw"
+            style="width: auto; height: 65vw"
           />
           <div>
             <button @click="closePopup" class="btn btn-secondary mt-2">
