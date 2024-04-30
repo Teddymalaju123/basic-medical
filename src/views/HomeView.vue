@@ -21,9 +21,6 @@
             <!-- QR Code Generator -->
             <div class="qrcode" v-if="qrCodeData">
               <VueQrcode :value="qrCodeData" type="url" />
-              <button @click="generateQRCode" class="btn btn-primary">
-                Generate QR Code
-              </button>
             </div>
           </div>
         </div>

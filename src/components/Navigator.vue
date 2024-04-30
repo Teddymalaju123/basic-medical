@@ -1,8 +1,10 @@
 <template>
-<nav class="tapbar">
-  <div class="tapbar-top">
+<nav class="tapbar d-flex justify-content-between">
+  <i class="fa-solid fa-chevron-left mt-3 ms-2" @click="goBack"></i>
+  <div class="tapbar-top mt-2">
     <span>{{ selectedTab }}</span>
   </div>
+  <div></div>
 </nav>
 
  <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -30,6 +32,9 @@ export default {
   methods: {
     selectTab(tabName) {
       this.selectedTab = tabName;
+    },
+    goBack() {
+      this.$router.go(-1);
     },
   },
 };
