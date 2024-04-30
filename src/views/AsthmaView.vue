@@ -7,7 +7,7 @@
   <main class="d-flex justify-content-center align-items-center vh-100">
     <div class="card text-center">
       <div class="card-body">
-        <div class="card-text row">
+        <div class="card-text">
           <!-- ปุ่มเลือก ไม่หอบ -->
           <div @click="showNotAsthmaPopup" class="noasthe-body">
             ไม่มีอาการหอบ
@@ -33,13 +33,13 @@
         <div v-if="notAsthmaPopupVisible" class="popup">
           <div class="header-pop">
             <h2>ไม่หอบ</h2>
-            <h2>สบาย หายใจสะดวก ไม่แน่นหน้าอกหรือไอ</h2>
+            <p>สบาย หายใจสะดวก ไม่แน่นหน้าอกหรือไอ</p>
           </div>
 
           <div class="body-popup">
             <p>ปฏิบัติดังนี้</p>
             <div>- ใช้ยาป้องกันหอบเป็นประจำทุกวัน ไม่ปรับยาลดลง</div>
-            <div>- หลีกเลี่ยงสิงกระตุ้นที่ทำให้อาการแย่ลง</div>
+            <div>- หลีกเลี่ยงสิ่งกระตุ้นที่ทำให้อาการแย่ลง</div>
             <div>
               - ถ้าหอบจากการออกกำลังกายให้พ่นยาขยายหลอดลมก่อนออกกำลังกาย 15 นาที
             </div>
@@ -82,7 +82,7 @@
 
           <div class="body-popup">
             <p>ปฏิบัติดังนี้</p>
-            <div>- ควรพบแบทย์ทันที</div>
+            <div>- ควรพบแพทย์ทันที</div>
             <div>- พ่นยาฉุกเฉิน 1 ชุด 15 นาที ระหว่างทางไปโรงพยาบาล</div>
             <div>
               - pMDI 1 ชุด คือ กดยา 4 ครั้ง แต่ล่ะครั้งห่างกัน 10 วินาที
@@ -102,7 +102,7 @@
           <img
             src="@/assets/asthema.png"
             alt="รูปภาพ"
-            style="width: auto; height: 40vw"
+            style="width: 100%; max-width: 400px; height: auto"
           />
           <div>
             <button @click="closePopup" class="btn btn-secondary mt-2">
@@ -224,7 +224,52 @@ export default {
   padding-top: 5px;
 }
 
-.img {
-  size: 50%;
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .noasthe-body,
+  .asthe-body,
+  .hardasthe-body {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .noasthe-body,
+  .asthe-body,
+  .hardasthe-body {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .noasthe-body,
+  .asthe-body,
+  .hardasthe-body {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 600px) {
+  .popup {
+    width: 90%;
+  }
+}
+
+@media (min-width: 600px) {
+  .popup {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .popup {
+    width: 40%;
+  }
 }
 </style>
