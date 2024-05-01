@@ -1,20 +1,12 @@
 <template>
-  <div class="d-flex justify-content-evenly">
-    <div></div>
-    <div class="mt-5">
-      <iframe
-        width="75%"
-        height="75%"
-        src="https://youtube.com/embed/DPzkI5Ryt5E?si=BsMbVgA9xf-EroAB"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+  <div class="d-flex justify-content-center">
+    <div class="mt-1"> 
+      <img
+        src="@/assets/asthema.png"
+        alt="รูปภาพ"
+        class="responsive-image"
+      />
     </div>
-
-    <div></div>
   </div>
 </template>
 
@@ -23,3 +15,29 @@ export default {
   name: "Spacer",
 };
 </script>
+
+<style scoped>
+.responsive-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .responsive-image {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-image {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .responsive-image {
+    max-width: 50%;
+  }
+}
+</style>
