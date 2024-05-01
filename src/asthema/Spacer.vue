@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex justify-content-center">
-    <div class="mt-1"> 
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="max-image-width">
       <img
         src="@/assets/asthema.png"
         alt="รูปภาพ"
@@ -19,7 +19,6 @@ export default {
 <style scoped>
 .responsive-image {
   width: 100%;
-  max-width: 100%;
   height: auto;
 }
 
@@ -39,5 +38,12 @@ export default {
   .responsive-image {
     max-width: 50%;
   }
+}
+
+.max-image-width {
+  max-width: calc(80vw - 25px);
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
 }
 </style>

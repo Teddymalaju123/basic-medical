@@ -14,3 +14,35 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-container {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app-container {
+    font-size: 20px;
+  }
+}
+</style>

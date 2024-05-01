@@ -1,24 +1,29 @@
 <template>
-<nav class="tapbar d-flex justify-content-between">
-  <i class="fa-solid fa-chevron-left mt-3 ms-2" @click="goBack"></i>
-  <div class="tapbar-top mt-2">
-    <span>{{ selectedTab }}</span>
+  <div @dblclick="toggleNavbar">
+    <nav class="tapbar d-flex justify-content-between" v-show="showNavbar">
+      <i class="fa-solid fa-chevron-left mt-3 ms-2" @click="goBack"></i>
+      <div class="tapbar-top mt-2">
+        <span>{{ selectedTab }}</span>
+      </div>
+      <div></div>
+    </nav>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation" v-show="showNavbar">
+      <div class="navbar-start">
+        <div class="icon-link">
+          <router-link
+            to="/"
+            class="navbar-item"
+            :class="{ active: $route.path === '/' }"
+            @click="selectTab('Action plan')"
+          >
+            <i class="fa-solid fa-truck-medical" style="font-size: 24px;"></i>
+            <div><span class="text-nav">Action plan</span></div>
+          </router-link>
+        </div>
+      </div>
+    </nav>
   </div>
-  <div></div>
-</nav>
-
- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-start">
-    <div class="icon-link">
-
-      <router-link to="/" class="navbar-item" :class="{ active: $route.path === '/' }" @click="selectTab('Action plan')">
-        <i class="fa-solid fa-truck-medical" style="font-size: 24px;"></i>
-        <div><span class="text-nav">Action plan</span></div>
-      </router-link>
-
-    </div>
-  </div>
-</nav>
 </template>
 
 <script>
@@ -27,6 +32,7 @@ export default {
   data() {
     return {
       selectedTab: "Action plan",
+      showNavbar: true,
     };
   },
   methods: {
@@ -36,17 +42,20 @@ export default {
     goBack() {
       this.$router.go(-1);
     },
+    toggleNavbar() {
+      this.showNavbar = !this.showNavbar;
+    },
   },
 };
 </script>
 
 <style scoped>
-.tapbar{
-    background-color: orange;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    border-bottom: 4px solid #dda42a;
+.tapbar {
+  background-color: orange;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 4px solid #dda42a;
 }
 
 .navbar {
@@ -58,6 +67,7 @@ export default {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  height: 65px;
 }
 
 .navbar-item {
