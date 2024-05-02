@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex justify-content-center align-items-center">
-    <div class="max-image-width">
+    <div class="image-container mt-2">
       <img
         src="@/assets/asthema.png"
         alt="รูปภาพ"
@@ -17,6 +17,17 @@ export default {
 </script>
 
 <style scoped>
+.image-container {
+  max-width: calc(100vw - 10px);
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .responsive-image {
   width: 100%;
   height: auto;
@@ -38,12 +49,5 @@ export default {
   .responsive-image {
     max-width: 50%;
   }
-}
-
-.max-image-width {
-  max-width: calc(80vw - 25px);
-  overflow-x: auto;
-  display: flex;
-  justify-content: center;
 }
 </style>

@@ -11,6 +11,9 @@ import Handihaler from '../asthema/Handihaler.vue'
 import MDI from '../asthema/MDI.vue'
 import Spacer from '../asthema/Spacer.vue'
 import Turbuhaler from '../asthema/Turbuhaler.vue'
+import NoCopd from '../components/NoCopd.vue'
+import CopdC from '../components/CopdC.vue'
+import HardCopd from '../components/HardCopd.vue'
 
 
 const routes = [
@@ -48,6 +51,21 @@ const routes = [
     path: '/hardAsthema',
     name: 'hardAsthema',
     component: HardAsthema,
+  },
+  {
+    path: '/nocopd',
+    name: 'nocopd',
+    component: NoCopd,
+  },
+  {
+    path: '/copdc',
+    name: 'copdc',
+    component: CopdC,
+  },
+  {
+    path: '/hardCopd',
+    name: 'hardCopd',
+    component: HardCopd,
   },
   {
     path: '/accuhaler',

@@ -1,50 +1,45 @@
 <template>
+  <header class="text-center">
+    <h1>แนวทางปฏิบัติฉุกเฉินเมื่อเกิดอาการปอดกั้นเรื้องรัง?</h1>
+    <h2>ตอนนี้ท่านมีอาการปอดกั้นเรื้อรังเหรือไม่</h2>
+  </header>
+
   <main class="d-flex justify-content-center align-items-center vh-100">
     <div class="card text-center">
       <div class="card-body">
-        <div class="card-text row">
-          <button @click="showNotAsthmaPopup" class="btn btn-primary">
-            ไม่มีอาการหอบ
-          </button>
+        <div class="card-text">
+          <div @click="goToNoCopdView" class="noasthe-body">
+            <div class="border-bottom border-dark border-2">อาการปกติ</div>
+            <div class="text-a">- ไม่มีอาการหอบ</div>
+            <div class="text-a">- ทำกิจวัตรประจำวันได้ตามปกติ</div>
+            <div class="text-a">- ไอเสมหะออกง่าย</div>
+            <div class="text-a">- นอนหลับดี</div>
+            <div class="text-a">- รับประทานอาหาร</div>
+            <div class="text-a">- ออกกำลังกายได้</div>
+          </div>
 
-          <button @click="showAsthmaPopup" class="btn btn-primary mt-2">
-            มีอาการหอบ
-          </button>
+          <div class="asthe-body" @click="goToCopdC">
+            <div class="border-bottom border-dark border-2">อาการแย่ลงจากโรค</div>
+            <div class="text-a">- หายใจหอบ</div>
+            <div class="text-a">- ทำกิจวัตรประจำวันไม่ได้ตามปกติ</div>
+            <div class="text-a">- ไอมากขึ้น</div>
+            <div class="text-a">- เสมหะเหนียวข้น และเปลี่ยนสี</div>
+            <div class="text-a">- มีไข้</div>
+            <div class="text-a">- นอนไม่หลับ</div>
+            <div class="text-a">- เบื่ออาหาร</div>
+            <div class="text-a">- สมาธิลดลง</div>
+          </div>
 
-          <div>
-            <div v-if="notAsthmaPopupVisible" class="popup">
-              <div class="popup-content">
-                <h2>ไม่มีอาการหอบ</h2>
-                <p>คำอธิบายเกี่ยวกับการดูแลสุขภาพเบื้องต้น</p>
-                <button @click="closePopup" class="btn btn-secondary">
-                  ปิด
-                </button>
-              </div>
-            </div>
-
-            <div v-if="asthmaPopupVisible" class="popup">
-              <div class="popup-content">
-                <h2>มีอาการหอบ</h2>
-                <p>คำอธิบายเกี่ยวกับอาการเบื้องต้นของหอบ</p>
-                <button @click="showMedicationPopup" class="btn btn-primary">
-                  ยาสำหรับการรักษา
-                </button>
-                <button @click="closePopup" class="btn btn-secondary">
-                  ปิด
-                </button>
-              </div>
-            </div>
-
-            <div v-if="medicationPopupVisible" class="popup">
-              <div class="popup-content">
-                <h2>ยาสำหรับการรักษา</h2>
-                <p>ข้อมูลเกี่ยวกับการพ่นยาสำหรับการรักษาอาการหอบ</p>
-                <img src="@/assets/asthema.png" alt="รูปภาพ" />
-                <button @click="closePopup" class="btn btn-secondary">
-                  ปิด
-                </button>
-              </div>
-            </div>
+          <div class="hardasthe-body" @click="goToHardCopd">
+            <div class="border-bottom border-dark border-2">อาการกำเริบและอันตราย</div>
+            <div class="text-a">- หายใจหอบมาก</div>
+            <div class="text-a">- ไอถี่ และมีเสมหะมาก</div>
+            <div class="text-a">- มีเลือดในเสมหะ</div>
+            <div class="text-a">- เจ็บหน้าอก</div>
+            <div class="text-a">- สับสน พูดไม่รู้เรื่อง</div>
+            <div class="text-a">- เป็นลม หมดสติ</div>
+            <div class="text-a">- ใช้ยาสูดฉุกเฉินแล้วไม่ดีขึ้น</div>
+            <div class="text-a">- มีไข้หนาวสั่น</div>
           </div>
         </div>
       </div>
@@ -52,32 +47,56 @@
   </main>
 </template>
 
+
 <script>
 export default {
   name: "CopdView",
-  data() {
-    return {
-      notAsthmaPopupVisible: false,
-      asthmaPopupVisible: false,
-      medicationPopupVisible: false,
-      qrCodeData: window.location.href,
-    };
-  },
   methods: {
-    showNotAsthmaPopup() {
-      this.notAsthmaPopupVisible = true;
+    goToNoCopdView() {
+      this.$router.push("/nocopd");
     },
-    showAsthmaPopup() {
-      this.asthmaPopupVisible = true;
+    goToCopdC() {
+      this.$router.push("/copdc");
     },
-    showMedicationPopup() {
-      this.medicationPopupVisible = true;
-    },
-    closePopup() {
-      this.notAsthmaPopupVisible = false;
-      this.asthmaPopupVisible = false;
-      this.medicationPopupVisible = false;
+    goToHardCopd() {
+      this.$router.push("/hardCopd");
     },
   },
 };
 </script>
+
+<style scoped>
+.noasthe-body {
+  background-color: green;
+  width: 100%;
+  color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.asthe-body {
+  background-color: yellow;
+  width: 100%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.hardasthe-body {
+  background-color: red;
+  width: 100%;
+  color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.text-a {
+  font-size: 10px;
+}
+
+</style>

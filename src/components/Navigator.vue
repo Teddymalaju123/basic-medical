@@ -1,27 +1,11 @@
 <template>
-  <div @dblclick="toggleNavbar">
-    <nav class="tapbar d-flex justify-content-between" v-show="showNavbar">
-      <i class="fa-solid fa-chevron-left mt-3 ms-2" @click="goBack"></i>
+  <div @click="toggleNavbar">
+    <nav class="tapbar d-flex justify-content-between">
+      <i class="fa-solid fa-chevron-left mt-3 ms-2" style="cursor: pointer;" @click="goBack"></i>
       <div class="tapbar-top mt-2">
-        <span>{{ selectedTab }}</span>
+        <span>HOME</span>
       </div>
       <div></div>
-    </nav>
-
-    <nav class="navbar" role="navigation" aria-label="main navigation" v-show="showNavbar">
-      <div class="navbar-start">
-        <div class="icon-link">
-          <router-link
-            to="/"
-            class="navbar-item"
-            :class="{ active: $route.path === '/' }"
-            @click="selectTab('Action plan')"
-          >
-            <i class="fa-solid fa-truck-medical" style="font-size: 24px;"></i>
-            <div><span class="text-nav">Action plan</span></div>
-          </router-link>
-        </div>
-      </div>
     </nav>
   </div>
 </template>
@@ -29,21 +13,9 @@
 <script>
 export default {
   name: "Navigator",
-  data() {
-    return {
-      selectedTab: "Action plan",
-      showNavbar: true,
-    };
-  },
   methods: {
-    selectTab(tabName) {
-      this.selectedTab = tabName;
-    },
     goBack() {
       this.$router.go(-1);
-    },
-    toggleNavbar() {
-      this.showNavbar = !this.showNavbar;
     },
   },
 };
@@ -56,6 +28,10 @@ export default {
   display: flex;
   justify-content: center;
   border-bottom: 4px solid #dda42a;
+}
+
+.tapbar-top .mt-2{
+  cursor: pointer;
 }
 
 .navbar {
@@ -85,9 +61,6 @@ export default {
   align-items: center;
 }
 
-.icon-link i {
-  margin-right: 5px;
-}
 
 .navbar-start {
   display: flex;
