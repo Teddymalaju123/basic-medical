@@ -90,15 +90,7 @@ export default {
   gap: 20px;
 }
 
-.noasthe-body, .asthe-body, .hardasthe-body {
-  font-size: 24px;
-  cursor: pointer;
+.card-body{
+  width: 350px;
 }
-
-@media (max-width: 768px) {
-  .noasthe-body, .asthe-body, .hardasthe-body {
-    font-size: 18px;
-  }
-}
-
 </style>

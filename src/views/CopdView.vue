@@ -99,4 +99,7 @@ export default {
   font-size: 10px;
 }
 
+.card-body{
+  width: 350px;
+}
 </style>
