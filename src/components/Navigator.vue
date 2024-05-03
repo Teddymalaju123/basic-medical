@@ -1,9 +1,13 @@
 <template>
   <div @click="toggleNavbar">
     <nav class="tapbar d-flex justify-content-between">
-      <i class="fa-solid fa-chevron-left mt-3 ms-2" style="cursor: pointer;" @click="goBack"></i>
+      <i
+        class="fa-solid fa-chevron-left mt-3 ms-2"
+        style="cursor: pointer"
+        @click="goBack"
+      ></i>
       <div class="tapbar-top mt-2">
-        <span>HOME</span>
+        <div class="home" @click="goHome"><span>HOME</span></div>
       </div>
       <div></div>
     </nav>
@@ -16,6 +20,9 @@ export default {
   methods: {
     goBack() {
       this.$router.go(-1);
+    },
+    goHome() {
+      this.$router.push("/");
     },
   },
 };
@@ -30,7 +37,7 @@ export default {
   border-bottom: 4px solid #dda42a;
 }
 
-.tapbar-top .mt-2{
+.tapbar-top .mt-2 {
   cursor: pointer;
 }
 
@@ -61,10 +68,13 @@ export default {
   align-items: center;
 }
 
-
 .navbar-start {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.home{
+  cursor: pointer;
 }
 </style>
