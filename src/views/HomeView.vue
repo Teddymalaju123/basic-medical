@@ -5,7 +5,7 @@
     </header>
 
     <main class="d-flex justify-content-center align-items-center vh-100">
-      <div class="card text-center">
+      <div class="card text-center ms-1 me-1">
         <div class="card-body">
           <div class="card-text row">
             <!-- ปุ่มเลือก ไม่หอบ -->
@@ -75,7 +75,7 @@ export default {
 }
 .card {
   width: 25rem;
-  border: 2px solid #007bff;
+  border: 2px solid #f8f8f8;
 }
 .qrcode img {
   width: 200px;

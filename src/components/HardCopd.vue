@@ -1,5 +1,5 @@
 <template>
-  <div class="card text-center">
+  <div class="card text-center ms-2 me-2 mt-4">
     <div class="card-header">
       <h2>อาการกำเริบและอันตราย</h2>
       <p>พูดได้เป็นคำ ไม่เป็นประโยค</p>

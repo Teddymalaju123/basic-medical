@@ -1,9 +1,10 @@
 <template>
-  <div class="card text-center">
+  <div class="card text-center ms-2 me-2 mt-4">
     <div class="card-header">
       <h2>ไม่หอบ</h2>
       <p>สบาย หายใจสะดวก ไม่แน่นหน้าอกหรือไอ</p>
     </div>
+
     <div class="card-body">
       <h5 class="card-title">ปฏิบัติดังนี้</h5>
       <div class="card-text">
@@ -20,25 +21,31 @@
 
       <div class="border border-2 rounded-2 mt-3 d-grid gap-2 col-6 mx-auto">
         <div class="mt-2">
-          <button class="btn btn-outline-success">MDI</button>
+          <button class="btn btn-outline-success" @click="goToMDI">MDI</button>
         </div>
 
         <div class="mt-2">
-          <button class="btn btn-outline-success">
+          <button class="btn btn-outline-success" @click="goToSpacer">
             MDI + Spacer
           </button>
         </div>
 
         <div class="mt-2">
-          <button class="btn btn-outline-success">Turbuhaler</button>
+          <button class="btn btn-outline-success" @click="goToTurbuhaler">
+            Turbuhaler
+          </button>
         </div>
 
         <div class="mt-2">
-          <button class="btn btn-outline-success" @click="goToAccuhaler">Accuhaler</button>
+          <button class="btn btn-outline-success" @click="goToAccuhaler">
+            Accuhaler
+          </button>
         </div>
 
         <div class="mt-2 pb-2">
-          <button class="btn btn-outline-success">Handihaler</button>
+          <button class="btn btn-outline-success" @click="goToHandihaler">
+            Handihaler
+          </button>
         </div>
       </div>
 
@@ -49,11 +56,23 @@
 <script>
 export default {
   name: "NoAsthema",
-  methods :{
-    goToAccuhaler(){
-        this.$router.push('/accuhaler');
-    }
-  }
+   methods: {
+    goToAccuhaler() {
+      this.$router.push("/accuhaler");
+    },
+    goToHandihaler() {
+      this.$router.push("/handihaler");
+    },
+    goToMDI() {
+      this.$router.push("/mdi");
+    },
+    goToSpacer() {
+      this.$router.push("/spacer");
+    },
+    goToTurbuhaler() {
+      this.$router.push("/turbuhaler");
+    },
+  },
 };
 </script>
 
@@ -61,4 +80,5 @@ export default {
  .btn-outline-success{
     width: 95%;
  }
+ 
 </style>

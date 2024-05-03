@@ -1,16 +1,23 @@
 <template>
-  <header class="text-center">
-    <h1>แนวทางปฏิบัติฉุกเฉินเมื่อเกิดอาการปอดกั้นเรื้องรัง?</h1>
-    <h2>ตอนนี้ท่านมีอาการปอดกั้นเรื้อรังเหรือไม่</h2>
-  </header>
+  <div>
+    <header
+      class="text-center"
+      style="
+        padding: 20px;
+        background: linear-gradient(to right, #007bff, #00bcd4);
+        color: white;
+      "
+    >
+      <h1>แนวทางปฏิบัติฉุกเฉินเมื่อเกิดอาการปอดกั้นเรื้องรัง?</h1>
+      <h2>ตอนนี้ท่านมีอาการปอดกั้นเรื้อรังเหรือไม่</h2>
+    </header>
 
-  <main class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card text-center">
+    <main class="d-flex justify-content-center align-items-center mt-5">
       <div class="card-body">
         <div class="card-text">
           <div @click="goToNoCopdView" class="noasthe-body">
             <div class="content">
-              <div class="border-bottom border-dark border-2">อาการปกติ</div>
+              <div class="border-bottom border-2">อาการปกติ</div>
               <div class="text-a">- ไม่มีอาการหอบ</div>
               <div class="text-a">- ทำกิจวัตรประจำวันได้ตามปกติ</div>
               <div class="text-a">- ไอเสมหะออกง่าย</div>
@@ -22,9 +29,7 @@
 
           <div @click="goToCopdC" class="asthe-body">
             <div class="content">
-              <div class="border-bottom border-dark border-2">
-                อาการแย่ลงจากโรค
-              </div>
+              <div class="border-bottom border-2">อาการแย่ลงจากโรค</div>
               <div class="text-a">- หายใจหอบ</div>
               <div class="text-a">- ทำกิจวัตรประจำวันไม่ได้ตามปกติ</div>
               <div class="text-a">- ไอมากขึ้น</div>
@@ -38,9 +43,7 @@
 
           <div @click="goToHardCopd" class="hardasthe-body">
             <div class="content">
-              <div class="border-bottom border-dark border-2">
-                อาการกำเริบและอันตราย
-              </div>
+              <div class="border-bottom border-2">อาการกำเริบและอันตราย</div>
               <div class="text-a">- หายใจหอบมาก</div>
               <div class="text-a">- ไอถี่ และมีเสมหะมาก</div>
               <div class="text-a">- มีเลือดในเสมหะ</div>
@@ -53,8 +56,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -76,16 +79,31 @@ export default {
 
 <style scoped>
 .card-body {
-  width: 75vh;
-  height: 50vh;
+  width: 95vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow-y: auto;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .card-text {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  height: 100%;
-  overflow-y: auto;
+  justify-content: space-around;
+  flex: 1;
+  max-height: 60vh;
+}
+
+.text-a {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .noasthe-body,
@@ -94,10 +112,12 @@ export default {
   color: white;
   border: 1px solid #ccc;
   cursor: pointer;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .noasthe-body {
@@ -111,14 +131,33 @@ export default {
 
 .hardasthe-body {
   background-color: red;
+  color: white;
 }
 
 .content {
   padding: 10px;
-  text-align: left;
 }
 
-.text-a {
-  font-size: 15px;
+.border-bottom {
+  border-bottom: 2px solid #000;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .card-body {
+    width: 80vw;
+  }
+}
+
+h1 {
+  font-size: 4vw;
+  margin-bottom: 2vh;
+}
+
+h2 {
+  font-size: 3vw;
 }
 </style>

@@ -9,16 +9,15 @@
     <h2 style="font-size: 1.5rem">ตอนนี้ท่านมีอาการหอบหรือไม่</h2>
   </header>
 
-  <main class="d-flex justify-content-center align-items-center vh-100">
-    <div class="card text-center">
-      <div class="card-body">
+  <main class="d-flex justify-content-center align-items-center mt-5">
+      <div class="card-body" >
         <div class="card-text">
           <div @click="goToNoAsthmaView" class="noasthe-body">
-            <div class="content">ไม่มีอาการหอบ</div>
+            <div class="content" style="overflow: auto;">ไม่มีอาการหอบ</div>
           </div>
 
           <div class="asthe-body" @click="goToAsthmaC">
-            <div class="content">
+            <div class="content" style="overflow: auto;">
               <div class="border-bottom border-1">หอบ</div>
               <div class="text-a">ตื่นมาไอตอนกลางคืน</div>
               <div class="text-a">แน่นหน้าอก หวีด</div>
@@ -27,7 +26,7 @@
           </div>
 
           <div class="hardasthe-body" @click="goToHardAsthema">
-            <div class="content">
+            <div class="content" style="overflow: auto;">
               <div class="border-bottom border-1">หอบมาก</div>
               <div class="text-a">พูดได้เป็นคำ ไม่เป็นประโยค</div>
               <div class="text-a">หน้าเขียว</div>
@@ -36,7 +35,6 @@
           </div>
         </div>
       </div>
-    </div>
   </main>
 </template>
 
@@ -59,15 +57,24 @@ export default {
 
 <style scoped>
 .card-body {
-  width: 75vh;
+  width: 95vw;
   height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .card-text {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 100%;
+  flex: 1;
 }
 
 .noasthe-body,
@@ -80,6 +87,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .noasthe-body {
@@ -93,10 +102,18 @@ export default {
 
 .hardasthe-body {
   background-color: red;
+  color: white;
 }
 
 .content {
   padding: 10px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #6c757d;
+  margin-bottom: 10px;
 }
 
 .text-a {
@@ -116,13 +133,19 @@ export default {
   color: white;
 }
 
+@media (min-width: 768px) {
+  .card-body {
+    width: 80vw;
+    height: 60vh;
+  }
+}
 
 h1 {
-  font-size: 2rem; 
-  margin-bottom: 10px; 
+  font-size: 6vw;
+  margin-bottom: 2vh;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 4vw;
 }
 </style>
