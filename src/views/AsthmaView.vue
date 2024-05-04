@@ -1,7 +1,10 @@
 <template>
   <header
     class="text-center"
-    style="padding: 20px; background: linear-gradient(to bottom, white, #F5F5F5);"
+    style="
+      padding: 20px;
+      background: linear-gradient(to bottom, white, #f5f5f5);
+    "
   >
     <h1 style="font-size: 2rem; margin-bottom: 10px">
       แนวทางปฏิบัติฉุกเฉินเมื่อเกิดอาการหอบ?
@@ -10,32 +13,32 @@
   </header>
 
   <main class="d-flex justify-content-center align-items-center mt-5">
-      <div class="card-body" >
-        <div class="card-text">
-          <div @click="goToNoAsthmaView" class="noasthe-body">
-            <div class="content" style="overflow: auto;">ไม่มีอาการหอบ</div>
-          </div>
+  <div class="card-body">
+    <div class="card-text">
+      <div @click="goToNoAsthmaView" class="noasthe-body">
+        <div class="content">ไม่มีอาการหอบ</div>
+      </div>
 
-          <div class="asthe-body" @click="goToAsthmaC">
-            <div class="content" style="overflow: auto;">
-              <div class="border-bottom border-1">หอบ</div>
-              <div class="text-a">ตื่นมาไอตอนกลางคืน</div>
-              <div class="text-a">แน่นหน้าอก หวีด</div>
-              <div class="text-a">ค่าสมรรถภาพปอด 50 - 80% ของค่าสูงสุด</div>
-            </div>
-          </div>
-
-          <div class="hardasthe-body" @click="goToHardAsthema">
-            <div class="content" style="overflow: auto;">
-              <div class="border-bottom border-1">หอบมาก</div>
-              <div class="text-a">พูดได้เป็นคำ ไม่เป็นประโยค</div>
-              <div class="text-a">หน้าเขียว</div>
-              <div class="text-a">ค่าสมรรถภาพปอดน้อยกว่า 50% ของค่าสูงสุด</div>
-            </div>
-          </div>
+      <div @click="goToAsthmaC" class="asthe-body">
+        <div class="content">
+          <div class="border-bottom border-1">หอบ</div>
+          <div class="text-a">ตื่นมาไอตอนกลางคืน</div>
+          <div class="text-a">แน่นหน้าอก หวีด</div>
+          <div class="text-a">ค่าสมรรถภาพปอด 50 - 80% ของค่าสูงสุด</div>
         </div>
       </div>
-  </main>
+
+      <div @click="goToHardAsthema" class="hardasthe-body">
+        <div class="content">
+          <div class="border-bottom border-1">หอบมาก</div>
+          <div class="text-a">พูดได้เป็นคำ ไม่เป็นประโยค</div>
+          <div class="text-a">หน้าเขียว</div>
+          <div class="text-a">ค่าสมรรถภาพปอดน้อยกว่า 50% ของค่าสูงสุด</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 </template>
 
 <script>
@@ -58,7 +61,7 @@ export default {
 <style scoped>
 .card-body {
   width: 95vw;
-  height: 50vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,8 +76,8 @@ export default {
 .card-text {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  flex: 1;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .noasthe-body,
@@ -83,41 +86,35 @@ export default {
   color: white;
   border: 1px solid #ccc;
   cursor: pointer;
-  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   margin-bottom: 20px;
+  flex-grow: 1;
+  padding: 10px;
 }
 
 .noasthe-body {
   background-color: green;
+  width: 50vw;
 }
 
 .asthe-body {
   background-color: yellow;
   color: black;
+  width: 50vw;
 }
 
 .hardasthe-body {
   background-color: red;
   color: white;
+  width: 50vw;
 }
 
 .content {
-  padding: 10px;
-}
-
-.section-title {
-  font-weight: bold;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #6c757d;
-  margin-bottom: 10px;
-}
-
-.text-a {
-  font-size: 15px;
+  font-size: 25px;
+  line-height: 1.5;
 }
 
 .border-1 {

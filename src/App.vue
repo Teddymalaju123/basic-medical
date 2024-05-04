@@ -1,7 +1,9 @@
 <template>
-  <div style="background: linear-gradient(to right, #9DC4FE, #246DDA);">
-    <Navigator />
-    <router-view />
+  <div id="app">
+    <div>
+      <Navigator />
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -9,40 +11,32 @@
 import Navigator from "./components/Navigator.vue";
 
 export default {
+  name: "App",
   components: {
     Navigator,
   },
 };
 </script>
 
-<style scoped>
-.app-container {
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#app {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
-  .app-container {
-    font-size: 14px;
-  }
+#app {
+  background: linear-gradient(to right, #DBE9FA, #82CAFF);
 }
 
-@media (min-width: 768px) {
-  .app-container {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 992px) {
-  .app-container {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .app-container {
-    font-size: 20px;
-  }
+#app > div {
+  height: 100%;
+  overflow: auto;
 }
 </style>

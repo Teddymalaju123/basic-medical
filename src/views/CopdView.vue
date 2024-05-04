@@ -102,7 +102,7 @@ export default {
 }
 
 .text-a {
-  font-size: 14px;
+  font-size: 25px;
   line-height: 1.5;
 }
 
@@ -112,31 +112,37 @@ export default {
   color: white;
   border: 1px solid #ccc;
   cursor: pointer;
-  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
   margin-bottom: 20px;
+  height: auto;
 }
 
 .noasthe-body {
   background-color: green;
+  width: 50vw;
 }
 
 .asthe-body {
   background-color: yellow;
   color: black;
+  width: 50vw;
 }
 
 .hardasthe-body {
   background-color: red;
   color: white;
+  width: 50vw;
 }
 
 .content {
   padding: 10px;
+  font-size: 25px;
+  line-height: 1.5;
 }
+
 
 .border-bottom {
   border-bottom: 2px solid #000;
