@@ -6,7 +6,7 @@
 
     <main class="d-flex justify-content-center align-items-center vh-100">
       <div class="card text-center ms-1 me-1">
-        <div class="card-body">
+        <div class="card-body" style="background: linear-gradient(to right, #9DC4FE, #246DDA);">
           <div class="card-text row">
             <!-- ปุ่มเลือก ไม่หอบ -->
             <button @click="goToCopdView" class="btn btn-primary">
@@ -20,6 +20,7 @@
 
             <!-- QR Code Generator -->
             <div class="qrcode" v-if="qrCodeData">
+              <h1 class="text-qr">scan me:</h1>
               <VueQrcode :value="qrCodeData" type="url" />
             </div>
           </div>
@@ -64,15 +65,6 @@ export default {
 </script>
 
 <style scoped>
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  border: 1px solid black;
-  padding: 20px;
-}
 .card {
   width: 25rem;
   border: 2px solid #f8f8f8;
@@ -83,17 +75,23 @@ export default {
 }
 .card-form {
   margin:20px;
-  border: 2px solid orange;
+  border: 2px solid #f8f8f8;
 }
 .btn.btn-primary:active{
-  background-color: #a00404;
+  background-color: aliceblue;
+  color:black;
 }
 .btn.btn-primary:hover{
-  background-color: #a00404;
+  background-color: aliceblue;
+  color:black;
 }
 
 .vh-100 {
     height: 50vh !important;
 }
 
+.text-qr{
+  font-size: 20px;
+  color: aliceblue;
+}
 </style>

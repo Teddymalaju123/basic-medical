@@ -30,11 +30,10 @@ export default {
 
 <style scoped>
 .tapbar {
-  background: linear-gradient(to right, orange, #FF7F50);
+  background: linear-gradient(to right, white, #f8f8f8);
   height: 50px;
   display: flex;
   justify-content: center;
-  border-bottom: 4px solid #FF6347;
 }
 
 .tapbar-top .mt-2 {

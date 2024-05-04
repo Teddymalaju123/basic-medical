@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background: linear-gradient(to right, #9DC4FE, #246DDA);">
     <Navigator />
     <router-view />
   </div>

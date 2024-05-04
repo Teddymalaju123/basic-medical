@@ -1,7 +1,7 @@
 <template>
   <header
     class="text-center"
-    style="padding: 20px; background: linear-gradient(to right, #007bff, #00bcd4); color: white"
+    style="padding: 20px; background: linear-gradient(to bottom, white, #F5F5F5);"
   >
     <h1 style="font-size: 2rem; margin-bottom: 10px">
       แนวทางปฏิบัติฉุกเฉินเมื่อเกิดอาการหอบ?
