@@ -6,21 +6,18 @@
 
     <main class="d-flex justify-content-center align-items-center vh-100">
       <div class="card text-center ms-1 me-1">
-        <div class="card-body" style="background: linear-gradient(to right, #9DC4FE, #246DDA);">
+        <div class="card-body" style="background: linear-gradient(to right, #DBE9FA, #82CAFF);">
           <div class="card-text row">
-            <!-- ปุ่มเลือก ไม่หอบ -->
-            <button @click="goToCopdView" class="btn btn-primary">
+            <button @click="goToCopdView" class="btn btn-light">
               โรคปอดอุดกั้นเรื้องรัง
             </button>
 
-            <!-- ปุ่มเลือก หอบแล้ว -->
-            <button @click="goToAsthmaView" class="btn btn-primary mt-2">
+            <button @click="goToAsthmaView" class="btn btn-light mt-2">
               โรคหอบหืด
             </button>
 
-            <!-- QR Code Generator -->
             <div class="qrcode" v-if="qrCodeData">
-              <h1 class="text-qr">scan me:</h1>
+              <h1 class="text-qr">scan me :</h1>
               <VueQrcode :value="qrCodeData" type="url" />
             </div>
           </div>
@@ -77,12 +74,12 @@ export default {
   margin:20px;
   border: 2px solid #f8f8f8;
 }
-.btn.btn-primary:active{
-  background-color: aliceblue;
+.btn.btn-light:active{
+  background-color: #82CAFF;
   color:black;
 }
-.btn.btn-primary:hover{
-  background-color: aliceblue;
+.btn.btn-light:hover{
+  background-color: #82CAFF;
   color:black;
 }
 
@@ -92,6 +89,6 @@ export default {
 
 .text-qr{
   font-size: 20px;
-  color: aliceblue;
+  color: black;
 }
 </style>

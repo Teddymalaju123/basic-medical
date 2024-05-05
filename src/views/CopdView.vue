@@ -4,7 +4,7 @@
       class="text-center"
       style="
         padding: 20px;
-        background: linear-gradient(to right, #007bff, #00bcd4);
+        background: linear-gradient(to top, #43BFC7, #43C6DB);
         color: white;
       "
     >
@@ -159,11 +159,11 @@ export default {
 }
 
 h1 {
-  font-size: 4vw;
+  font-size: 3vw;
   margin-bottom: 2vh;
 }
 
 h2 {
-  font-size: 3vw;
+  font-size: 2vw;
 }
 </style>

@@ -3,13 +3,14 @@
     class="text-center"
     style="
       padding: 20px;
-      background: linear-gradient(to bottom, white, #f5f5f5);
+      background: linear-gradient(to top, #43BFC7, #43C6DB);
+      color: white;
     "
   >
-    <h1 style="font-size: 2rem; margin-bottom: 10px">
+    <h1>
       แนวทางปฏิบัติฉุกเฉินเมื่อเกิดอาการหอบ?
     </h1>
-    <h2 style="font-size: 1.5rem">ตอนนี้ท่านมีอาการหอบหรือไม่</h2>
+    <h2>ตอนนี้ท่านมีอาการหอบหรือไม่</h2>
   </header>
 
   <main class="d-flex justify-content-center align-items-center mt-5">
@@ -138,11 +139,11 @@ export default {
 }
 
 h1 {
-  font-size: 6vw;
+  font-size: 3vw;
   margin-bottom: 2vh;
 }
 
 h2 {
-  font-size: 4vw;
+  font-size: 2vw;
 }
 </style>
