@@ -19,37 +19,31 @@
         </div>
       </div>
 
-      <div class="border border-2 rounded-2 mt-3 d-grid gap-2 col-6 mx-auto">
+       <div class="border border-2 rounded-2 mt-3 d-grid gap-2 col-6 mx-auto">
         <div class="mt-2">
-          <button class="btn btn-outline-success" @click="goToMDI">MDI</button>
+          <button class="btn btn-outline-success" @click="goToMDI"><img src="@/assets/mdiicon.png" alt="MDI" style="width: 50px"> MDI</button>
         </div>
 
         <div class="mt-2">
           <button class="btn btn-outline-success" @click="goToSpacer">
-            MDI + Spacer
+            <img src="@/assets/mdispacericon.png" alt="MDI + Spacer" style="width: 50px"> MDI + Spacer
           </button>
         </div>
 
         <div class="mt-2">
-          <button class="btn btn-outline-success" @click="goToTurbuhaler">
-            Turbuhaler
-          </button>
+          <button class="btn btn-outline-success" @click="goToTurbuhaler"><img src="@/assets/turbuhalaricon.png" alt="Turbuhaler" style="width: 50px"> Turbuhaler</button>
         </div>
 
         <div class="mt-2">
-          <button class="btn btn-outline-success" @click="goToAccuhaler">
-            Accuhaler
-          </button>
+          <button class="btn btn-outline-success" @click="goToAccuhaler"><img src="@/assets/accuhalaricon.png" alt="Accuhaler" style="width: 50px"> Accuhaler</button>
         </div>
 
         <div class="mt-2 pb-2">
-          <button class="btn btn-outline-success" @click="goToHandihaler">
-            Handihaler
-          </button>
+          <button class="btn btn-outline-success" @click="goToHandihaler"><img src="@/assets/handihalericon.png" alt="Handihaler" style="width: 50px"> Handihaler</button>
         </div>
       </div>
+      </div>
 
-    </div>
   </div>
 </template>
 
