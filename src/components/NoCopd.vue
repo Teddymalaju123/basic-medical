@@ -2,6 +2,12 @@
   <div class="card text-center ms-2 me-2 mt-4">
     <div class="card-header">
       <h2>อาการปกติ</h2>
+      <p>ไม่มีอาการหอบ</p>
+      <p>ทำกิจวัตรประจำวันได้ตามปกติ</p>
+      <p>ไอเสมหะออกง่าย</p>
+      <p>นอนหลับดี</p>
+      <p>รับประทานอาหารได้</p>
+      <p>ออกกำลังกายได้</p>
     </div>
     <div class="card-body">
       <h5 class="card-title">ปฏิบัติดังนี้</h5>

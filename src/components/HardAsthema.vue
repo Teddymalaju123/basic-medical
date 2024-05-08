@@ -12,7 +12,7 @@
         <div>- ควรพบแพทย์ทันที</div>
         <div>- พ่นยาฉุกเฉิน 1 ชุด 15 นาที ระหว่างทางไปโรงพยาบาล</div>
         <div>- pMDI 1 ชุด คือ กดยา 4 ครั้ง แต่ล่ะครั้งห่างกัน 10 วินาที</div>
-        <div>- Trubuhaler 1 ชุด คือ 1 สูด</div>
+        <div>- Turbuhaler 1 ชุด คือ 1 สูด</div>
       </div>
 
       <div class="border border-2 rounded-2 mt-3 d-grid gap-2 col-6 mx-auto">
