@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <<div class="border border-2 rounded-2 mt-3 d-grid gap-2 col-6 mx-auto">
+      <div class="border border-2 rounded-2 mt-3 d-grid gap-2 col-6 mx-auto">
         <div class="mt-2">
           <button class="btn btn-outline-success" @click="goToMDI"><img src="@/assets/icon3.png" alt="MDI" style="width: 50px"> MDI</button>
         </div>
