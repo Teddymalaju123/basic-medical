@@ -18,17 +18,17 @@
 
        <div class="border border-2 rounded-2 mt-3 d-grid gap-2 col-6 mx-auto">
         <div class="mt-2">
-          <button class="btn btn-outline-success" @click="goToMDI"><img src="@/assets/mdiicon.png" alt="MDI" style="width: 50px"> MDI</button>
+          <button class="btn btn-outline-success" @click="goToMDI"><img src="@/assets/icon3.png" alt="MDI" style="width: 50px"> MDI</button>
         </div>
 
         <div class="mt-2">
           <button class="btn btn-outline-success" @click="goToSpacer">
-            <img src="@/assets/mdispacericon.png" alt="MDI + Spacer" style="width: 50px"> MDI + Spacer
+            <img src="@/assets/icon2.png" alt="MDI + Spacer" style="width: 50px"> MDI + Spacer
           </button>
         </div>
 
         <div class="mt-2">
-          <button class="btn btn-outline-success" @click="goToTurbuhaler"><img src="@/assets/turbuhalaricon.png" alt="Turbuhaler" style="width: 50px"> Turbuhaler</button>
+          <button class="btn btn-outline-success" @click="goToTurbuhaler"><img src="@/assets/icon.png" alt="Turbuhaler" style="width: 50px"> Turbuhaler</button>
         </div>
 
         <div class="mt-2">
