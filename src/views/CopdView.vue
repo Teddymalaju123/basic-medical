@@ -52,6 +52,7 @@
               <div class="text-a">- เป็นลม หมดสติ</div>
               <div class="text-a">- ใช้ยาสูดฉุกเฉินแล้วไม่ดีขึ้น</div>
               <div class="text-a">- มีไข้หนาวสั่น</div>
+              <div class="text-a">- มีไข้หนาวสั่น</div>
             </div>
           </div>
         </div>
