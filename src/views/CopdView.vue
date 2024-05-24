@@ -4,7 +4,7 @@
       class="text-center"
       style="
         padding: 20px;
-        background: linear-gradient(to top, #43BFC7, #43C6DB);
+        background: linear-gradient(to top, #43bfc7, #43c6db);
         color: white;
       "
     >
@@ -51,7 +51,6 @@
               <div class="text-a">- สับสน พูดไม่รู้เรื่อง</div>
               <div class="text-a">- เป็นลม หมดสติ</div>
               <div class="text-a">- ใช้ยาสูดฉุกเฉินแล้วไม่ดีขึ้น</div>
-              <div class="text-a">- มีไข้หนาวสั่น</div>
               <div class="text-a">- มีไข้หนาวสั่น</div>
             </div>
           </div>
@@ -143,7 +142,6 @@ export default {
   font-size: 25px;
   line-height: 1.5;
 }
-
 
 .border-bottom {
   border-bottom: 2px solid #000;
